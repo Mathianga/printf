@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
  * printf_HEX - This is a program that  prints a hexadecimal numbers.
  * @val: arguments.
- * Return: it returns a counter.
+ * Return: the program returns a counter.
  */
 int printf_HEX(va_list val)
 {

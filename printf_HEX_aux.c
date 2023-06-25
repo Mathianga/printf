@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * printf_HEX_aux - numbering system with base 16.
  * @num: number to print.
