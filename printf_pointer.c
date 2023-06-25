@@ -11,21 +11,21 @@ int printf_pointer(va_list val)
 	void *p;
 	char *string = "(nil)";
 	long int a;
-	int j;
-	int i;
+	int m;
+	int n;
 
 	p = va_arg(val, void*);
 	if (p == NULL)
 	{
-		for (i = 0; string[i] != '\0'; i++)
-			_putchar(string[i]);
-		return (i);
+		for (m = 0; string[m] != '\0'; m++)
+			_putchar(string[m]);
+		return (m);
 	}
 
 	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	j = printf_hex_aux(a);
+	n = printf_hex_aux(a);
 
-	return (j + 2);
+	return (n + 2);
 }

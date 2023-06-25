@@ -6,7 +6,7 @@
  */
 int printf_HEX_aux(unsigned int num)
 {
-	int i;
+	int m;
 	int *array;
 	int counter = 0;
 	unsigned int temp = num;
@@ -19,16 +19,16 @@ int printf_HEX_aux(unsigned int num)
 	counter++;
 	array = malloc(counter * sizeof(int));
 
-	for (i = 0; i < counter; i++)
+	for (m = 0; m < counter; m++)
 	{
-		array[i] = temp % 16;
+		array[m] = temp % 16;
 		temp /= 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (m = counter - 1; m >= 0; m--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		if (array[m] > 9)
+			array[m] = array[m] + 7;
+		_putchar(array[m] + '0');
 	}
 	free(array);
 	return (counter);

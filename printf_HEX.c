@@ -1,12 +1,12 @@
 #include "main.h"
 /**
  * printf_HEX - This is a program that  prints a hexadecimal numbers.
- * @val: arguments.
- * Return: the program returns a counter.
+ * @val:an arguments.
+ * Return: should  returns a counter.
  */
 int printf_HEX(va_list val)
 {
-	int i;
+	int m;
 	int *array;
 	int counter = 0;
 	unsigned int num = va_arg(val, unsigned int);
@@ -20,16 +20,16 @@ int printf_HEX(va_list val)
 	counter++;
 	array = malloc(counter * sizeof(int));
 
-	for (i = 0; i < counter; i++)
+	for (m = 0; m < counter; m++)
 	{
-		array[i] = temp % 16;
+		array[m] = temp % 16;
 		temp /= 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (m = counter - 1; m >= 0; m--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		if (array[m] > 9)
+			array[m] = array[m] + 7;
+		_putchar(array[m] + '0');
 	}
 	free(array);
 	return (counter);
