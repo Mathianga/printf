@@ -1,6 +1,7 @@
 #include "main.h"
+
 /**
- * print exclusuives string.
+ * printf_exclusive_string - a function that prints exclusuives string.
  * @val: arg t.
  * Return:length of the string to be return.
  */
